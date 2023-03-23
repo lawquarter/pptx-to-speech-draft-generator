@@ -1,3 +1,4 @@
+import os
 import backoff 
 import streamlit as st
 import openai
