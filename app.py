@@ -4,7 +4,6 @@ import streamlit as st
 import openai
 import pptx
 
-#API Keys
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise ValueError("Missing OPENAI_API_KEY environment variable.")
@@ -12,7 +11,6 @@ openai.api_key = OPENAI_API_KEY
 
 @backoff.on_exception(backoff.expo, openai.error.RateLimitError)
 def get_gpt4_response(system_prompt, user_prompt):
-    """Returns a davinci answer from OpenAI"""
     gpt_response = openai.ChatCompletion.create(
         model="gpt-4",
         temperature=0.00,
