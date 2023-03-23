@@ -1,0 +1,4 @@
+backoff 2.2.1
+streamlit 1.20.0
+openai 0.23.1
+python-pptx 0.6.21
